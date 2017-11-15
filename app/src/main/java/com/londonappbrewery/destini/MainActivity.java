@@ -36,20 +36,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if(mStoryIndex == 1){
+                if(mStoryIndex == 1 || mStoryIndex == 2){
                 mStoryView.setText(R.string.T3_Story);
                 mButtonTop.setText(R.string.T3_Ans1);
                 mButtonBottom.setText(R.string.T3_Ans2);
                 mStoryIndex = 3;
-                }else if(mStoryIndex == 3){
+                }else {
                     mStoryView.setText(R.string.T6_End);
                     mButtonBottom.setVisibility(View.GONE);
                     mButtonTop.setVisibility(View.GONE);
-                }else if(mStoryIndex == 2) {
-                    mStoryView.setText(R.string.T3_Story);
-                    mButtonTop.setText(R.string.T3_Ans1);
-                    mButtonBottom.setText(R.string.T3_Ans2);
-                    mStoryIndex =3;
                 }
             }
         });
@@ -69,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
                     mStoryView.setText(R.string.T4_End);
                     mButtonBottom.setVisibility(View.GONE);
                     mButtonTop.setVisibility(View.GONE);
-                }else if(mStoryIndex == 3){
+                }else {
                     mStoryView.setText(R.string.T5_End);
                     mButtonBottom.setVisibility(View.GONE);
                     mButtonTop.setVisibility(View.GONE);
